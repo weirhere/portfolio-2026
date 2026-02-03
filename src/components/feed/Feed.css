@@ -1,0 +1,11 @@
+.feed__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.feed__empty {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: var(--space-16) 0;
+}

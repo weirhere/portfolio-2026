@@ -1,0 +1,55 @@
+.feed-filters {
+  position: sticky;
+  top: var(--header-height);
+  z-index: var(--z-sticky);
+  background-color: var(--color-bg);
+  padding: var(--space-4) var(--content-padding);
+  margin-bottom: var(--space-6);
+  left: 0;
+  right: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.feed-filters__tags {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: var(--space-2);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.feed-filters__tags::-webkit-scrollbar {
+  display: none;
+}
+
+.feed-filters__tag {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.feed-filters__tag:hover {
+  color: var(--color-text);
+  background-color: var(--color-gray-100);
+}
+
+.feed-filters__tag--active {
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.feed-filters__tag--active:hover {
+  color: var(--color-white);
+  background-color: var(--color-gray-800);
+}

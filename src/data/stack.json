@@ -1,0 +1,96 @@
+{
+  "title": "Stack",
+  "description": "Tools I use & love that you should check out.",
+  "tools": [
+    {
+      "name": "Figma",
+      "category": "Design Tool",
+      "url": "https://figma.com",
+      "logo": "figma"
+    },
+    {
+      "name": "Cursor",
+      "category": "Code Editor",
+      "url": "https://cursor.sh",
+      "logo": "cursor"
+    },
+    {
+      "name": "Claude",
+      "category": "AI Assistant",
+      "url": "https://claude.ai",
+      "logo": "claude"
+    },
+    {
+      "name": "ChatGPT",
+      "category": "AI Assistant",
+      "url": "https://chat.openai.com",
+      "logo": "chatgpt"
+    },
+    {
+      "name": "Lovable",
+      "category": "AI Web Builder",
+      "url": "https://lovable.dev",
+      "logo": "lovable"
+    },
+    {
+      "name": "Framer",
+      "category": "Website Builder",
+      "url": "https://framer.com",
+      "logo": "framer"
+    },
+    {
+      "name": "Arc",
+      "category": "Browser",
+      "url": "https://arc.net",
+      "logo": "arc"
+    },
+    {
+      "name": "Raycast",
+      "category": "Productivity",
+      "url": "https://raycast.com",
+      "logo": "raycast"
+    },
+    {
+      "name": "Granola",
+      "category": "Meeting Notes",
+      "url": "https://granola.so",
+      "logo": "granola"
+    },
+    {
+      "name": "Notion Calendar",
+      "category": "Calendar",
+      "url": "https://calendar.notion.so",
+      "logo": "notion-calendar"
+    },
+    {
+      "name": "Slack",
+      "category": "Communication",
+      "url": "https://slack.com",
+      "logo": "slack"
+    },
+    {
+      "name": "Loom",
+      "category": "Video",
+      "url": "https://loom.com",
+      "logo": "loom"
+    },
+    {
+      "name": "GitHub",
+      "category": "Code",
+      "url": "https://github.com",
+      "logo": "github"
+    },
+    {
+      "name": "Vercel",
+      "category": "Hosting",
+      "url": "https://vercel.com",
+      "logo": "vercel"
+    },
+    {
+      "name": "Spotify",
+      "category": "Music",
+      "url": "https://spotify.com",
+      "logo": "spotify"
+    }
+  ]
+}

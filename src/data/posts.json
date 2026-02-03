@@ -1,0 +1,151 @@
+{
+  "posts": [
+    {
+      "id": "feathr",
+      "title": "Feathr",
+      "caption": "The all-in-one nonprofit marketing platform that makes missions impossible to ignore",
+      "type": "design",
+      "tags": ["product design", "design systems", "web", "nonprofit", "marketing"],
+      "date": "2023-05-01",
+      "images": {
+        "hero": "/images/projects/feathr/hero.png",
+        "heroAspectRatio": "16/9",
+        "gallery": [
+          {
+            "src": "/images/projects/feathr/dashboard.png",
+            "alt": "Dashboard showing conversions summary and breakdown",
+            "aspectRatio": "16/10"
+          },
+          {
+            "src": "/images/projects/feathr/email-builder.png",
+            "alt": "Email designer with drag-and-drop content blocks and test email modal",
+            "aspectRatio": "16/10"
+          },
+          {
+            "src": "/images/projects/feathr/forms.png",
+            "alt": "Form builder with share embed code modal",
+            "aspectRatio": "16/10"
+          },
+          {
+            "src": "/images/projects/feathr/date-picker.png",
+            "alt": "Date picker component variations",
+            "aspectRatio": "16/9"
+          },
+          {
+            "src": "/images/projects/feathr/components.png",
+            "alt": "UI components including menus and notifications",
+            "aspectRatio": "16/9"
+          },
+          {
+            "src": "/images/projects/feathr/navigation.png",
+            "alt": "Navigation sidebar design",
+            "aspectRatio": "3/4"
+          }
+        ]
+      },
+      "details": {
+        "description": "Every conversion begins with a connection. Feathr helps nonprofits grow their reach, attract the right people, and deepen engagement - all in one platform.\n\nAs the solo founding designer on the product team since May 2023, I've worked on elevating and refining the overall look and feel of the app while contributing to the product roadmap. I've shipped features including Google Ad Grant integration, drip email campaigns, a lite version of the app for more approachable onboarding, and fundraising tools to incentivize product adoption.\n\nMy work spans the full design system, from component design to complex user flows, ensuring a cohesive and polished experience across the entire platform.",
+        "role": "Founding Senior Product Designer",
+        "client": "Feathr",
+        "year": "2023-Present",
+        "link": {
+          "url": "https://www.feathr.co",
+          "label": "Visit Feathr"
+        }
+      }
+    },
+    {
+      "id": "geico",
+      "title": "GEICO",
+      "caption": "Design system modernization for one of America's largest auto insurance companies",
+      "type": "design",
+      "tags": ["product design", "design systems", "mobile", "web"],
+      "date": "2022-06-01",
+      "images": {
+        "hero": "/images/projects/geico/hero.webp",
+        "heroAspectRatio": "1/1",
+        "gallery": [
+          {
+            "src": "/images/projects/geico/mobile-screens.webp",
+            "alt": "Mobile app screens showing quote flow and coverage options",
+            "aspectRatio": "16/9"
+          },
+          {
+            "src": "/images/projects/geico/design-system.png",
+            "alt": "Design system components including typography, colors, and UI elements",
+            "aspectRatio": "16/9"
+          },
+          {
+            "src": "/images/projects/geico/app-screens.webp",
+            "alt": "Various mobile app interface screens",
+            "aspectRatio": "16/9"
+          },
+          {
+            "src": "/images/projects/geico/plan-selection.webp",
+            "alt": "Plan selection interface on mobile device",
+            "aspectRatio": "3/4"
+          }
+        ]
+      },
+      "details": {
+        "description": "GEICO is an American auto insurance company, industry leader, and one of the largest companies in the United States. One of the primary challenges in this project was navigating GEICO's extensive existing design system, which required significant updates to meet modern standards of usability and scalability.\n\nWe conducted extensive research on user experience to identify areas for improvement, then updated and redesigned components to enhance user interactions and experiences for their digital products. The team developed a high-contrast color scheme to ensure accessibility and a visually appealing interface. All components were meticulously designed and developed to function seamlessly in both light and dark modes, ensuring consistency and usability across all platforms.",
+        "role": "Product Designer",
+        "client": "GEICO via Brave People",
+        "year": "2022",
+        "link": {
+          "url": "https://www.bravepeople.co/work/geico",
+          "label": "View Case Study"
+        }
+      }
+    },
+    {
+      "id": "fcf",
+      "title": "Fan Controlled Football",
+      "caption": "A fan-driven football league where fans draft players, call plays, and make every decision",
+      "type": "design",
+      "tags": ["product design", "mobile", "web", "sports"],
+      "date": "2021-09-01",
+      "images": {
+        "hero": "/images/projects/fcf/hero.png",
+        "heroAspectRatio": "4/5",
+        "gallery": [
+          {
+            "src": "/images/projects/fcf/mobile-screens.png",
+            "alt": "Mobile app screens showing team selection, game activity, and rewards",
+            "aspectRatio": "4/5"
+          },
+          {
+            "src": "/images/projects/fcf/gamification.png",
+            "alt": "Gamification elements including daily bonus, badges, and highlights voting",
+            "aspectRatio": "4/5"
+          },
+          {
+            "src": "/images/projects/fcf/desktop-hero.png",
+            "alt": "FCF website homepage with Football Controlled By The Fans headline",
+            "aspectRatio": "16/9"
+          },
+          {
+            "src": "/images/projects/fcf/desktop-mockup.png",
+            "alt": "FCF website displayed on laptop mockup",
+            "aspectRatio": "16/9"
+          },
+          {
+            "src": "/images/projects/fcf/dashboard.png",
+            "alt": "User dashboard showing FanIQ points, badges, trophies, and open quests",
+            "aspectRatio": "16/10"
+          }
+        ]
+      },
+      "details": {
+        "description": "The Fan Controlled Football League is exactly what it sounds like: pick your team name, design your logo and jerseys, draft players, call plays, make every decision. As digital partners, Brave faced the challenge of blending gaming technology with real athletes to reimagine America's favorite sport in a completely fan-driven way.\n\nTo tap into existing UX muscle memory, we designed a platform that leverages natural expectations for a sports league while being visually positioned as something completely new and gamer-centric. Each week, fans have the power to draft players, engage in play-calling during the game, and make coaching/owner decisions for their team.\n\nI designed high-fidelity screens for both the iPhone/Android app and desktop site based on the established design system. The interface features a scalable design system, high-contrast dark interface for accessibility and visibility, color psychology to help users navigate and categorize content, and a balanced approach between requirements and engaging design language.",
+        "role": "Product Designer",
+        "client": "FCF via Brave People",
+        "year": "2021",
+        "link": {
+          "url": "https://www.bravepeople.co/work/fcf",
+          "label": "View Case Study"
+        }
+      }
+    }
+  ]
+}
