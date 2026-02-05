@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-subtle);
   min-height: 100vh;
 }
 
@@ -54,6 +54,23 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--content-padding);
+}
+
+.container--narrow {
+  max-width: var(--max-width-content);
+}
+
+/* Dashed border utilities */
+.border-dashed {
+  border: var(--dashed-border);
+}
+
+.border-dashed-top {
+  border-top: var(--dashed-border);
+}
+
+.border-dashed-bottom {
+  border-bottom: var(--dashed-border);
 }
 
 /* Image Loading Shimmer */

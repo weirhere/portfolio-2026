@@ -29,26 +29,32 @@
   /* Colors */
   --color-white: #ffffff;
   --color-black: #0a0a0a;
-  --color-gray-50: #fafafa;
-  --color-gray-100: #f5f5f5;
-  --color-gray-200: #e5e5e5;
+  --color-gray-50: #f5f5f5;
+  --color-gray-100: #ededed;
+  --color-gray-200: #cfcfcf;
   --color-gray-300: #d4d4d4;
   --color-gray-400: #a3a3a3;
-  --color-gray-500: #737373;
+  --color-gray-500: #858585;
   --color-gray-600: #525252;
   --color-gray-700: #404040;
   --color-gray-800: #262626;
   --color-gray-900: #171717;
 
   /* Semantic Colors */
-  --color-bg: var(--color-white);
-  --color-bg-subtle: var(--color-gray-50);
+  --color-bg: #ededed;
+  --color-bg-subtle: #f5f5f5;
   --color-text: var(--color-gray-900);
-  --color-text-secondary: var(--color-gray-500);
+  --color-text-secondary: #858585;
   --color-text-tertiary: var(--color-gray-400);
-  --color-border: var(--color-gray-200);
-  --color-border-subtle: var(--color-gray-100);
+  --color-border: #cfcfcf;
+  --color-border-subtle: #cfcfcf;
   --color-accent: var(--color-black);
+
+  /* Border Styles */
+  --dashed-border: 1px dashed #cfcfcf;
+
+  /* Backdrop */
+  --blur-backdrop: blur(10px);
 
   /* Spacing Scale (4px base) */
   --space-1: 0.25rem;   /* 4px */
@@ -66,7 +72,8 @@
   --space-32: 8rem;     /* 128px */
 
   /* Layout */
-  --max-width: 720px;
+  --max-width: 1200px;
+  --max-width-content: 720px;
   --header-height: 64px;
   --content-padding: clamp(var(--space-4), 5vw, var(--space-8));
 

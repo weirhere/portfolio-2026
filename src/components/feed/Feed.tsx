@@ -24,7 +24,7 @@ function Feed() {
   const introBio = aboutData.bio.split('\n\n')[0]
 
   return (
-    <section className="feed container">
+    <section className="feed container container--narrow">
       <header className="feed__intro">
         <img
           src="/images/avatar.jpg"
@@ -33,7 +33,6 @@ function Feed() {
         />
         <div className="feed__intro-content">
           <h1 className="feed__name">{aboutData.name}</h1>
-          <p className="feed__title">{aboutData.title}</p>
           <p className="feed__bio">{introBio}</p>
         </div>
       </header>
