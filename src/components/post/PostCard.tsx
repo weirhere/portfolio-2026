@@ -17,12 +17,14 @@ function PostCard({ post, isExpanded, onClick }: PostCardProps) {
       aria-expanded={isExpanded}
     >
       <div className="post-card__image-wrapper">
-        <PostImage
-          src={post.images.hero}
-          alt={post.title}
-          aspectRatio={post.images.heroAspectRatio}
-          className="post-card__image"
-        />
+        <div className="post-card__image-inner">
+          <PostImage
+            src={post.images.hero}
+            alt={post.title}
+            aspectRatio={post.images.heroAspectRatio}
+            className="post-card__image"
+          />
+        </div>
       </div>
       <div className="post-card__content">
         <div className="post-card__header">
