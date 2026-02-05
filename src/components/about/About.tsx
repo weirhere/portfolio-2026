@@ -14,7 +14,10 @@ function About() {
 
       <div className="about__bio">
         {bio.split('\n\n').map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
+          <p
+            key={index}
+            dangerouslySetInnerHTML={{ __html: paragraph }}
+          />
         ))}
       </div>
 

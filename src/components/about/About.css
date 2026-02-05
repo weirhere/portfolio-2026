@@ -40,6 +40,16 @@
   line-height: var(--leading-relaxed);
 }
 
+.about__bio a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.about__bio a:hover {
+  color: var(--color-gray-700);
+}
+
 .about__contact {
   margin-bottom: var(--space-10);
 }

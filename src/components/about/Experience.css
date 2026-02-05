@@ -19,7 +19,7 @@
 
 .experience__item {
   padding-bottom: var(--space-6);
-  border-bottom: var(--dashed-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .experience__item:last-child {
