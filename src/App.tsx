@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Feed from './components/feed/Feed'
@@ -6,27 +6,16 @@ import About from './components/about/About'
 import Stack from './components/stack/Stack'
 import './App.css'
 
-type View = 'work' | 'about' | 'stack'
-
 function App() {
-  const [currentView, setCurrentView] = useState<View>('work')
-
-  const renderView = () => {
-    switch (currentView) {
-      case 'work':
-        return <Feed />
-      case 'about':
-        return <About />
-      case 'stack':
-        return <Stack />
-    }
-  }
-
   return (
     <div className="app">
-      <Header currentView={currentView} onViewChange={setCurrentView} />
+      <Header />
       <main className="main">
-        {renderView()}
+        <Routes>
+          <Route path="/" element={<Feed />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/stack" element={<Stack />} />
+        </Routes>
       </main>
       <Footer />
     </div>

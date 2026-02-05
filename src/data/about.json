@@ -6,8 +6,16 @@
   "email": "iamandyweir@gmail.com",
   "links": [
     {
+      "label": "Twitter",
+      "url": "https://www.twitter.com/andyweirdesign/"
+    },
+    {
       "label": "LinkedIn",
       "url": "https://www.linkedin.com/in/andyryanweir/"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@andyweirdesign/"
     },
     {
       "label": "Dribbble",

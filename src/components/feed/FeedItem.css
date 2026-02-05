@@ -1,6 +1,6 @@
 .feed-item {
   padding-bottom: var(--space-10);
-  border-bottom: 1px solid var(--color-border-subtle);
+  border-bottom: var(--dashed-border);
 }
 
 .feed-item:last-child {

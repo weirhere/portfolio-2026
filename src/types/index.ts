@@ -53,3 +53,31 @@ export interface AboutData {
 }
 
 export type FilterType = 'all' | PostType;
+
+export interface Client {
+  name: string;
+  logo?: string;
+  url?: string;
+  industry?: string;
+}
+
+export interface ClientsData {
+  title: string;
+  clients: Client[];
+}
+
+export interface ExperiencePosition {
+  id: string;
+  company: string;
+  logo?: string;
+  role: string;
+  type: 'full-time' | 'part-time' | 'contract' | 'freelance';
+  startDate: string;
+  endDate: string | null;
+  description?: string;
+}
+
+export interface ExperienceData {
+  title: string;
+  positions: ExperiencePosition[];
+}

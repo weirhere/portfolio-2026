@@ -1,0 +1,38 @@
+{
+  "title": "Brave People",
+  "clients": [
+    {
+      "name": "Geico",
+      "industry": "Insurance"
+    },
+    {
+      "name": "Trunk Tools",
+      "industry": "Tools & Equipment"
+    },
+    {
+      "name": "FCF",
+      "industry": "Sports & Entertainment"
+    },
+    {
+      "name": "iQor",
+      "industry": "Business Process Outsourcing"
+    },
+    {
+      "name": "Marriott",
+      "industry": "Travel"
+    },
+    {
+      "name": "Surecave",
+      "industry": "Real Estate"
+    },
+    {
+      "name": "Eye Heart World",
+      "industry": "Non-Profit"
+    },
+    {
+      "name": "Micro Matic",
+      "industry": "Manufacturing"
+    }
+  ]
+}
+

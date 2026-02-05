@@ -8,6 +8,7 @@
 .post-card__image-wrapper {
   overflow: hidden;
   border-radius: var(--radius-md);
+  border: var(--dashed-border);
   margin-bottom: var(--space-4);
 }
 

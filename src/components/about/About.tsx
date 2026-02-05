@@ -1,11 +1,13 @@
 import aboutData from '../../data/about.json'
+import Experience from './Experience'
+import Clients from './Clients'
 import './About.css'
 
 function About() {
   const { name, title, bio, location, email, links } = aboutData
 
   return (
-    <section className="about container">
+    <section className="about container container--narrow">
       <header className="about__header">
         <img
           src="/images/avatar.jpg"
@@ -22,6 +24,9 @@ function About() {
           <p key={index}>{paragraph}</p>
         ))}
       </div>
+
+      <Experience />
+      <Clients />
 
       <div className="about__contact">
         <h2 className="about__section-title">Get in Touch</h2>

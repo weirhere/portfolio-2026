@@ -6,7 +6,7 @@ function Stack() {
   const { title, description, tools } = stackData
 
   return (
-    <section className="stack container">
+    <section className="stack container container--narrow">
       <header className="stack__header">
         <h1 className="stack__title">{title}</h1>
         <p className="stack__description">{description}</p>

@@ -1,0 +1,65 @@
+{
+  "title": "Experience",
+  "positions": [
+    {
+      "id": "feathr",
+      "company": "Feathr",
+      "logo": "/images/logos/feathr.svg",
+      "role": "Senior Product Designer",
+      "type": "full-time",
+      "startDate": "2023-05",
+      "endDate": null,
+      "description": "Leading design for core product features and design system."
+    },
+    {
+      "id": "brave-people",
+      "company": "Brave People",
+      "logo": "/images/logos/brave-people.png",
+      "role": "Product Designer",
+      "type": "contract",
+      "startDate": "2021-11",
+      "endDate": null,
+      "description": "Consulting on design systems and designing products."
+    },
+    {
+      "id": "webstaurantstore-lead",
+      "company": "WebstaurantStore",
+      "logo": "/images/logos/webstaurantstore.png",
+      "role": "Design Team Lead, Marketing Sites",
+      "type": "full-time",
+      "startDate": "2022-01",
+      "endDate": "2023-02",
+      "description": "Led the team and designed marketing sites for private label brands."
+    },
+    {
+      "id": "webstaurantstore-designer",
+      "company": "WebstaurantStore",
+      "logo": "/images/logos/webstaurantstore.png",
+      "role": "Product Designer, Marketing Sites",
+      "type": "full-time",
+      "startDate": "2021-07",
+      "endDate": "2022-01",
+      "description": "Designed marketing sites for private label brands."
+    },
+    {
+      "id": "chappellroberts",
+      "company": "ChappellRoberts",
+      "logo": "/images/logos/chappellroberts.png",
+      "role": "Designer",
+      "type": "full-time",
+      "startDate": "2020-06",
+      "endDate": "2021-07",
+      "description": "Designed brands, websites, and marketing materials."
+    },
+    {
+      "id": "brave-people",
+      "company": "Brave People",
+      "logo": "/images/logos/brave-people.png",
+      "role": "Visual Designer",
+      "type": "full-time",
+      "startDate": "2015-05",
+      "endDate": "2017-12",
+      "description": "Designed brands, websites and prototypes."
+    }
+  ]
+}

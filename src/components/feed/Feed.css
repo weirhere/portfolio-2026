@@ -1,5 +1,6 @@
 .feed__intro {
   display: flex;
+  flex-direction: column;
   gap: var(--space-5);
   margin-bottom: var(--space-10);
   max-width: 65ch;
@@ -20,20 +21,17 @@
 }
 
 .feed__name {
-  font-size: var(--text-xl);
+  font-size: 36px;
   font-weight: var(--font-semibold);
-}
-
-.feed__title {
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
+  letter-spacing: -0.0375em;
 }
 
 .feed__bio {
   margin-top: var(--space-2);
-  font-size: var(--text-sm);
+  font-size: 16px;
   color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
+  letter-spacing: -0.26px;
 }
 
 .feed__list {
