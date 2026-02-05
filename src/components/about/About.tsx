@@ -9,11 +9,11 @@ function About() {
   return (
     <section className="about container container--narrow">
       <header className="about__header">
-        <img
+        {/* <img
           src="/images/avatar.jpg"
           alt={name}
           className="about__avatar"
-        />
+        /> */}
         <h1 className="about__name">{name}</h1>
         <p className="about__title">{title}</p>
         <p className="about__location">{location}</p>

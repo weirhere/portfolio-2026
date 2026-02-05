@@ -17,6 +17,7 @@
 .about__name {
   font-size: var(--text-3xl);
   font-weight: var(--font-semibold);
+  letter-spacing: -0.0375em;
   margin-bottom: var(--space-2);
 }
 

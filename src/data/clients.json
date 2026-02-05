@@ -3,36 +3,33 @@
   "clients": [
     {
       "name": "Geico",
-      "industry": "Insurance"
+      "industry": "Insurance",
+      "url": "https://www.geico.com"
     },
     {
       "name": "Trunk Tools",
-      "industry": "Tools & Equipment"
+      "industry": "Tools & Equipment",
+      "url": "https://www.trunktools.com"
     },
     {
       "name": "FCF",
-      "industry": "Sports & Entertainment"
+      "industry": "Sports & Entertainment",
+      "url": "https://www.bravepeople.co/work/fcf"
     },
     {
       "name": "iQor",
-      "industry": "Business Process Outsourcing"
+      "industry": "Business Process Outsourcing",
+      "url": "https://www.bravepeople.co/work/iqor"
     },
     {
       "name": "Marriott",
-      "industry": "Travel"
+      "industry": "Travel",
+      "url": "https://www.marriott.com"
     },
     {
       "name": "Surecave",
-      "industry": "Real Estate"
-    },
-    {
-      "name": "Eye Heart World",
-      "industry": "Non-Profit"
-    },
-    {
-      "name": "Micro Matic",
-      "industry": "Manufacturing"
+      "industry": "Real Estate",
+      "url": "https://www.bravepeople.co/work/surecave"
     }
   ]
 }
-

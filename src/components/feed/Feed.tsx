@@ -26,11 +26,11 @@ function Feed() {
   return (
     <section className="feed container container--narrow">
       <header className="feed__intro">
-        <img
+        {/* <img
           src="/images/avatar.jpg"
           alt={aboutData.name}
           className="feed__avatar"
-        />
+        /> */}
         <div className="feed__intro-content">
           <h1 className="feed__name">{aboutData.name}</h1>
           <p className="feed__bio">{introBio}</p>

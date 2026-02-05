@@ -75,6 +75,7 @@ export interface ExperiencePosition {
   startDate: string;
   endDate: string | null;
   description?: string;
+  url?: string;
 }
 
 export interface ExperienceData {

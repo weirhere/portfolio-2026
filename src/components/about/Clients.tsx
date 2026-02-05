@@ -11,10 +11,17 @@ function Clients() {
       <ul className="clients__grid">
         {clients.map((client) => (
           <li key={client.name} className="clients__item">
-            <span className="clients__name">{client.name}</span>
-            {client.industry && (
-              <span className="clients__industry">{client.industry}</span>
-            )}
+            <a
+              href={client.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="clients__link"
+            >
+              <span className="clients__name">{client.name}</span>
+              {client.industry && (
+                <span className="clients__industry">{client.industry}</span>
+              )}
+            </a>
           </li>
         ))}
       </ul>
