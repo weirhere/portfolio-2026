@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import type { Post } from '../../types'
 import postsData from '../../data/posts.json'
+import aboutData from '../../data/about.json'
 import FeedFilters from './FeedFilters'
 import FeedItem from './FeedItem'
 import './Feed.css'
@@ -35,8 +36,22 @@ function Feed() {
     setExpandedPostId((current) => (current === postId ? null : postId))
   }
 
+  const introBio = aboutData.bio.split('\n\n')[0]
+
   return (
     <section className="feed container">
+      <header className="feed__intro">
+        <img
+          src="/images/avatar.jpg"
+          alt={aboutData.name}
+          className="feed__avatar"
+        />
+        <div className="feed__intro-content">
+          <h1 className="feed__name">{aboutData.name}</h1>
+          <p className="feed__title">{aboutData.title}</p>
+          <p className="feed__bio">{introBio}</p>
+        </div>
+      </header>
       <FeedFilters
         activeTag={activeTag}
         onTagChange={setActiveTag}
