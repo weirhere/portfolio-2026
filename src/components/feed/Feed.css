@@ -1,3 +1,41 @@
+.feed__intro {
+  display: flex;
+  gap: var(--space-5);
+  margin-bottom: var(--space-10);
+  max-width: 65ch;
+}
+
+.feed__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.feed__intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.feed__name {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+}
+
+.feed__title {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.feed__bio {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
 .feed__list {
   display: flex;
   flex-direction: column;
