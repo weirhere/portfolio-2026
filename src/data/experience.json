@@ -9,7 +9,7 @@
       "type": "full-time",
       "startDate": "2023-05",
       "endDate": null,
-      "description": "Leading design for core product features and design system."
+      "url": "https://www.feathr.co"
     },
     {
       "id": "brave-people",
@@ -19,7 +19,7 @@
       "type": "contract",
       "startDate": "2021-11",
       "endDate": null,
-      "description": "Consulting on design systems and designing products."
+      "url": "https://www.bravepeople.co"
     },
     {
       "id": "webstaurantstore-lead",
@@ -29,7 +29,7 @@
       "type": "full-time",
       "startDate": "2022-01",
       "endDate": "2023-02",
-      "description": "Led the team and designed marketing sites for private label brands."
+      "url": "https://www.webstaurantstore.com"
     },
     {
       "id": "webstaurantstore-designer",
@@ -39,7 +39,7 @@
       "type": "full-time",
       "startDate": "2021-07",
       "endDate": "2022-01",
-      "description": "Designed marketing sites for private label brands."
+      "url": "https://www.webstaurantstore.com"
     },
     {
       "id": "chappellroberts",
@@ -49,17 +49,17 @@
       "type": "full-time",
       "startDate": "2020-06",
       "endDate": "2021-07",
-      "description": "Designed brands, websites, and marketing materials."
+      "url": "https://www.chappellroberts.com"
     },
     {
-      "id": "brave-people",
+      "id": "brave-people-old",
       "company": "Brave People",
       "logo": "/images/logos/brave-people.png",
       "role": "Visual Designer",
       "type": "full-time",
       "startDate": "2015-05",
       "endDate": "2017-12",
-      "description": "Designed brands, websites and prototypes."
+      "url": "https://www.bravepeople.co"
     }
   ]
 }

@@ -31,12 +31,22 @@
 
 .clients__item {
   display: flex;
+}
+
+.clients__link {
+  display: flex;
   flex-direction: column;
   gap: var(--space-1);
+  flex: 1;
   padding: var(--space-4);
   background-color: var(--color-bg-subtle);
   border: var(--dashed-border);
   border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.clients__link:hover {
+  background-color: var(--color-gray-100);
 }
 
 .clients__name {
