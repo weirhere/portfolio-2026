@@ -42,11 +42,14 @@
   background-color: var(--color-bg-subtle);
   border: var(--dashed-border);
   border-radius: var(--radius-md);
-  transition: background-color var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    box-shadow var(--transition-slow);
 }
 
 .clients__link:hover {
-  background-color: var(--color-gray-100);
+  background-color: #fafafa;
+  box-shadow: var(--shadow-fancy);
 }
 
 .clients__name {

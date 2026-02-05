@@ -12,16 +12,6 @@
       "url": "https://www.feathr.co"
     },
     {
-      "id": "feathr",
-      "company": "Feathr",
-      "logo": "/images/logos/feathr.svg",
-      "role": "UI/UX Designer",
-      "type": "full-time",
-      "startDate": "2023-05",
-      "endDate": "2024-01",
-      "url": "https://www.feathr.co"
-    },
-    {
       "id": "brave-people",
       "company": "Brave People",
       "logo": "/images/logos/brave-people.png",
@@ -30,6 +20,16 @@
       "startDate": "2021-11",
       "endDate": null,
       "url": "https://www.bravepeople.co"
+    },
+    {
+      "id": "feathr",
+      "company": "Feathr",
+      "logo": "/images/logos/feathr.svg",
+      "role": "UI/UX Designer",
+      "type": "full-time",
+      "startDate": "2023-05",
+      "endDate": "2024-01",
+      "url": "https://www.feathr.co"
     },
     {
       "id": "webstaurantstore-lead",
@@ -58,7 +58,7 @@
       "role": "Designer",
       "type": "full-time",
       "startDate": "2020-06",
-      "endDate": "2021-07",
+      "endDate": "2021-06",
       "url": "https://www.chappellroberts.com"
     },
     {
