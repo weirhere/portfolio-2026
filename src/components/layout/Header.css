@@ -6,7 +6,7 @@
   max-width: calc(var(--max-width) - var(--space-4) * 2);
   margin-left: auto;
   margin-right: auto;
-  background-color: #f5f5f5a6;
+  background-color: hsla(0, 0%, 98%, 0.85);
   backdrop-filter: var(--blur-backdrop);
   -webkit-backdrop-filter: var(--blur-backdrop);
   border-radius: var(--radius-full);
@@ -118,11 +118,7 @@
     opacity var(--transition-fast),
     transform var(--transition-fast),
     visibility var(--transition-fast);
-  box-shadow:
-    0px 1px 1px -0.5px rgba(0, 0, 0, 0.05),
-    0px 3px 3px -1.5px rgba(0, 0, 0, 0.05),
-    0px 6px 6px -3px rgba(0, 0, 0, 0.05),
-    0px 12px 12px -6px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-fancy);
 }
 
 .header__dropdown:hover .header__dropdown-menu {
@@ -215,10 +211,7 @@
     background-color: var(--color-white);
     border: var(--dashed-border);
     border-radius: var(--radius-lg);
-    box-shadow: 0px 1px 1px -0.5px rgba(0,0,0,0.05),
-                0px 3px 3px -1.5px rgba(0,0,0,0.05),
-                0px 6px 6px -3px rgba(0,0,0,0.05),
-                0px 12px 12px -6px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow-fancy);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
