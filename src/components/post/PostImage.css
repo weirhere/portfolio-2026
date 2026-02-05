@@ -17,6 +17,7 @@
   object-fit: cover;
   opacity: 0;
   transition: opacity var(--transition-base);
+  will-change: transform;
 }
 
 .post-image__img--loaded {

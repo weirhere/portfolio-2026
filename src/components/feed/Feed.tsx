@@ -52,11 +52,11 @@ function Feed() {
           <p className="feed__bio">{introBio}</p>
         </div>
       </header>
-      <FeedFilters
+{/* <FeedFilters
         activeTag={activeTag}
         onTagChange={setActiveTag}
         availableTags={allTags}
-      />
+      /> */}
       <div className="feed__list">
         {filteredPosts.length === 0 ? (
           <p className="feed__empty">No posts found.</p>

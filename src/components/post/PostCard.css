@@ -3,15 +3,6 @@
   width: 100%;
   text-align: left;
   background: transparent;
-  transition: transform var(--transition-base);
-}
-
-.post-card:hover {
-  transform: translateY(-2px);
-}
-
-.post-card--expanded:hover {
-  transform: none;
 }
 
 .post-card__image-wrapper {
