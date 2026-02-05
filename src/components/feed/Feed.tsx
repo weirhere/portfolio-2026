@@ -2,12 +2,10 @@ import { useState, useMemo } from 'react'
 import type { Post } from '../../types'
 import postsData from '../../data/posts.json'
 import aboutData from '../../data/about.json'
-import FeedFilters from './FeedFilters'
 import FeedItem from './FeedItem'
 import './Feed.css'
 
 function Feed() {
-  const [activeTag, setActiveTag] = useState<string | null>(null)
   const [expandedPostId, setExpandedPostId] = useState<string | null>(null)
 
   const posts: Post[] = postsData.posts as Post[]
@@ -18,19 +16,6 @@ function Feed() {
       (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     )
   }, [posts])
-
-  // Get all unique tags
-  const allTags = useMemo(() => {
-    const tags = new Set<string>()
-    posts.forEach((post) => post.tags.forEach((tag) => tags.add(tag)))
-    return Array.from(tags).sort()
-  }, [posts])
-
-  // Filter posts
-  const filteredPosts = useMemo(() => {
-    if (!activeTag) return sortedPosts
-    return sortedPosts.filter((post) => post.tags.includes(activeTag))
-  }, [sortedPosts, activeTag])
 
   const handleToggle = (postId: string) => {
     setExpandedPostId((current) => (current === postId ? null : postId))
@@ -52,16 +37,11 @@ function Feed() {
           <p className="feed__bio">{introBio}</p>
         </div>
       </header>
-{/* <FeedFilters
-        activeTag={activeTag}
-        onTagChange={setActiveTag}
-        availableTags={allTags}
-      /> */}
       <div className="feed__list">
-        {filteredPosts.length === 0 ? (
+        {sortedPosts.length === 0 ? (
           <p className="feed__empty">No posts found.</p>
         ) : (
-          filteredPosts.map((post) => (
+          sortedPosts.map((post) => (
             <FeedItem
               key={post.id}
               post={post}
