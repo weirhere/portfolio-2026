@@ -4,19 +4,12 @@ import Clients from './Clients'
 import './About.css'
 
 function About() {
-  const { name, title, bio, location, email, links } = aboutData
+  const { name, bio, email, links } = aboutData
 
   return (
     <section className="about container container--narrow">
       <header className="about__header">
-        {/* <img
-          src="/images/avatar.jpg"
-          alt={name}
-          className="about__avatar"
-        /> */}
         <h1 className="about__name">{name}</h1>
-        <p className="about__title">{title}</p>
-        <p className="about__location">{location}</p>
       </header>
 
       <div className="about__bio">
