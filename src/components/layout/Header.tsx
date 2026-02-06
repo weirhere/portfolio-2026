@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
+import ResumeButton from '../resume/ResumeButton'
 import './Header.css'
 
 function Header() {
@@ -76,6 +77,7 @@ function Header() {
           >
             Stack
           </NavLink>
+          <ResumeButton />
           <div className="header__dropdown">
             <button className="header__nav-link header__dropdown-trigger header__dropdown-trigger--desktop">
               Projects

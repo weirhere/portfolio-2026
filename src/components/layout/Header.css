@@ -79,6 +79,25 @@
   background-color: var(--color-gray-200);
 }
 
+/* Resume button */
+.header__resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.header__resume-btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.header__resume-icon {
+  flex-shrink: 0;
+}
+
 /* Dropdown */
 .header__dropdown {
   position: relative;
