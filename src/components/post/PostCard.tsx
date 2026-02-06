@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { Post } from '../../types'
 import Tag from '../ui/Tag'
 import PostImage from './PostImage'
@@ -5,17 +6,11 @@ import './PostCard.css'
 
 interface PostCardProps {
   post: Post
-  isExpanded: boolean
-  onClick: () => void
 }
 
-function PostCard({ post, isExpanded, onClick }: PostCardProps) {
+function PostCard({ post }: PostCardProps) {
   return (
-    <button
-      className={`post-card ${isExpanded ? 'post-card--expanded' : ''}`}
-      onClick={onClick}
-      aria-expanded={isExpanded}
-    >
+    <Link to={`/work/${post.id}`} className="post-card">
       <div className="post-card__image-wrapper">
         <div className="post-card__image-inner">
           <PostImage
@@ -27,12 +22,7 @@ function PostCard({ post, isExpanded, onClick }: PostCardProps) {
         </div>
       </div>
       <div className="post-card__content">
-        <div className="post-card__header">
-          <h2 className="post-card__title">{post.title}</h2>
-          <span className="post-card__toggle" aria-hidden="true">
-            {isExpanded ? '−' : '+'}
-          </span>
-        </div>
+        <h2 className="post-card__title">{post.title}</h2>
         <p className="post-card__caption">{post.caption}</p>
         <div className="post-card__tags">
           {post.tags.map((tag) => (
@@ -40,7 +30,7 @@ function PostCard({ post, isExpanded, onClick }: PostCardProps) {
           ))}
         </div>
       </div>
-    </button>
+    </Link>
   )
 }
 

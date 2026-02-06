@@ -9,7 +9,7 @@ function About() {
   return (
     <section className="about container container--narrow">
       <header className="about__header">
-        <h1 className="about__name">{name}</h1>
+        <h1 className="about__name">About</h1>
       </header>
 
       <div className="about__bio">

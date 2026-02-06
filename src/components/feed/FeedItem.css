@@ -7,25 +7,3 @@
   border-bottom: none;
   padding-bottom: 0;
 }
-
-/* CSS Grid technique for smooth height animation */
-.feed-item__expand-wrapper {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows var(--transition-expand);
-}
-
-.feed-item--expanded .feed-item__expand-wrapper {
-  grid-template-rows: 1fr;
-}
-
-.feed-item__expand-content {
-  overflow: hidden;
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .feed-item__expand-wrapper {
-    transition: none;
-  }
-}
