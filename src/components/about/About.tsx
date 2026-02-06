@@ -4,7 +4,7 @@ import Clients from './Clients'
 import './About.css'
 
 function About() {
-  const { name, bio, email, links } = aboutData
+  const { bio, email, links } = aboutData
 
   return (
     <section className="about container container--narrow">
