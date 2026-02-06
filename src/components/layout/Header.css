@@ -79,14 +79,26 @@
   background-color: var(--color-gray-200);
 }
 
-/* Resume button */
+/* Resume button — primary action */
 .header__resume-btn {
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
   cursor: pointer;
   border: none;
-  background: transparent;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  padding: var(--space-2) var(--space-3);
+  transition:
+    opacity var(--transition-fast);
+}
+
+.header__resume-btn:hover {
+  background-color: var(--color-gray-800);
+  color: var(--color-bg);
 }
 
 .header__resume-btn:disabled {
@@ -96,6 +108,11 @@
 
 .header__resume-icon {
   flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.header__resume-btn:hover .header__resume-icon {
+  transform: translateY(2px);
 }
 
 /* Dropdown */
@@ -222,8 +239,8 @@
   .header__nav {
     position: absolute;
     top: calc(100% + var(--space-2));
-    left: var(--space-4);
-    right: var(--space-4);
+    left: 0;
+    right: 0;
     flex-direction: column;
     gap: var(--space-1);
     padding: var(--space-3);

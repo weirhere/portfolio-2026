@@ -33,15 +33,14 @@
   padding: var(--space-4);
   border-radius: var(--radius-md);
   background-color: var(--color-bg-subtle);
-  border: var(--dashed-border);
+  border: 1px solid var(--color-gray-100);
   transition:
     background-color var(--transition-fast),
     box-shadow var(--transition-slow);
 }
 
 .stack__item:hover {
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-fancy);
+  background-color: var(--color-gray-100);
 }
 
 .stack__item-info {
@@ -59,4 +58,10 @@
 .stack__item-category {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
+}
+
+.stack__external-icon {
+  flex-shrink: 0;
+  margin-left: auto;
+  color: var(--color-text-tertiary);
 }

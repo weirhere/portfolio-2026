@@ -7,6 +7,7 @@ import Footer from './components/layout/Footer'
 import Feed from './components/feed/Feed'
 import About from './components/about/About'
 import Stack from './components/stack/Stack'
+import ProjectDetail from './components/post/ProjectDetail'
 import './App.css'
 
 function ScrollToTop() {
@@ -20,18 +21,22 @@ function ScrollToTop() {
 }
 
 function App() {
+  const { pathname } = useLocation()
+  const isProjectDetail = pathname.startsWith('/work/')
+
   return (
     <div className="app">
       <ScrollToTop />
-      <Header />
-      <main className="main">
+      {!isProjectDetail && <Header />}
+      <main className={`main${isProjectDetail ? ' main--flush' : ''}`}>
         <Routes>
           <Route path="/" element={<Feed />} />
           <Route path="/about" element={<About />} />
           <Route path="/stack" element={<Stack />} />
+          <Route path="/work/:projectId" element={<ProjectDetail />} />
         </Routes>
       </main>
-      <Footer />
+      {!isProjectDetail && <Footer />}
       <Analytics />
       <SpeedInsights />
     </div>

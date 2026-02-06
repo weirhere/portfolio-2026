@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import type { Post } from '../../types'
 import postsData from '../../data/posts.json'
 import aboutData from '../../data/about.json'
@@ -6,7 +7,7 @@ import FeedItem from './FeedItem'
 import './Feed.css'
 
 function Feed() {
-  const [expandedPostId, setExpandedPostId] = useState<string | null>(null)
+  const [generatingResume, setGeneratingResume] = useState(false)
 
   const posts: Post[] = postsData.posts as Post[]
 
@@ -17,8 +18,17 @@ function Feed() {
     )
   }, [posts])
 
-  const handleToggle = (postId: string) => {
-    setExpandedPostId((current) => (current === postId ? null : postId))
+  const handleResumeClick = async () => {
+    if (generatingResume) return
+    setGeneratingResume(true)
+    try {
+      const { generateResume } = await import('../resume/generateResume')
+      await generateResume()
+    } catch (err) {
+      console.error('Resume generation failed:', err)
+    } finally {
+      setGeneratingResume(false)
+    }
   }
 
   const introBio = aboutData.bio.split('\n\n')[0]
@@ -32,8 +42,19 @@ function Feed() {
           className="feed__avatar"
         /> */}
         <div className="feed__intro-content">
-          <h1 className="feed__name">{aboutData.name}</h1>
+          <h1 className="feed__name">Andy Weir is a <s className="feed__name--struck">vibe coder</s> design engineer in the making...</h1>
           <p className="feed__bio">{introBio}</p>
+          <div className="feed__actions">
+            <Link to="/about" className="feed__btn">About</Link>
+            <button className="feed__btn" onClick={handleResumeClick} disabled={generatingResume}>
+              {generatingResume ? 'Generating...' : 'Resume'}
+              {!generatingResume && (
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M6 2v6.5M3 6.5L6 9.5 9 6.5M2.5 11h7" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </header>
       <div className="feed__list">
@@ -41,12 +62,7 @@ function Feed() {
           <p className="feed__empty">No posts found.</p>
         ) : (
           sortedPosts.map((post) => (
-            <FeedItem
-              key={post.id}
-              post={post}
-              isExpanded={expandedPostId === post.id}
-              onToggle={() => handleToggle(post.id)}
-            />
+            <FeedItem key={post.id} post={post} />
           ))
         )}
       </div>

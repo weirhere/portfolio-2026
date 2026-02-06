@@ -4,12 +4,12 @@ import Clients from './Clients'
 import './About.css'
 
 function About() {
-  const { name, bio, email, links } = aboutData
+  const { bio, email, links } = aboutData
 
   return (
     <section className="about container container--narrow">
       <header className="about__header">
-        <h1 className="about__name">{name}</h1>
+        <h1 className="about__name">About</h1>
       </header>
 
       <div className="about__bio">

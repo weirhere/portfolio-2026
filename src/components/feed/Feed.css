@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
-  margin-bottom: var(--space-10);
+  margin-bottom: var(--space-16);
   max-width: 65ch;
 }
 
@@ -26,12 +26,56 @@
   letter-spacing: -0.0375em;
 }
 
+.feed__name--struck {
+  color: var(--color-text-tertiary);
+  text-decoration: line-through;
+}
+
 .feed__bio {
   margin-top: var(--space-2);
   font-size: 16px;
   color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
   letter-spacing: -0.26px;
+}
+
+.feed__actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.feed__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  background-color: var(--color-gray-100);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast);
+}
+
+.feed__btn:hover {
+  background-color: var(--color-gray-200);
+}
+
+.feed__btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.feed__btn svg {
+  transition: transform var(--transition-fast);
+}
+
+.feed__btn:hover svg {
+  transform: translateY(2px);
 }
 
 .feed__list {
