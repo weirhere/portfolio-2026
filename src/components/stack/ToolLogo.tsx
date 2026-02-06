@@ -8,7 +8,7 @@ function ToolLogo({ name }: ToolLogoProps) {
   return (
     <div className="tool-logo">
       <img
-        src={`/images/logos/${name}.png`}
+        src={`/images/logos/${name.includes('.') ? name : name + '.png'}`}
         alt=""
         className="tool-logo__image"
       />
