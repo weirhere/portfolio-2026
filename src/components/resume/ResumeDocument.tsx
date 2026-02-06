@@ -314,7 +314,6 @@ export default function ResumeDocument({
   tools,
   generationDate,
 }: ResumeDocumentProps) {
-  const linkedIn = about.links.find(l => l.label === 'LinkedIn')
   const portfolioUrl = 'andyryanweir.com'
 
   const designSkills = Array.from(
