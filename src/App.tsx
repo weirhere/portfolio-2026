@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Feed from './components/feed/Feed'
@@ -30,6 +31,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <SpeedInsights />
     </div>
   )
 }
