@@ -117,6 +117,14 @@ function Header({ breadcrumb }: HeaderProps) {
                 </button>
                 <div className={`header__dropdown-menu ${isProjectsOpen ? 'header__dropdown-menu--open' : ''}`}>
                   <a
+                    href="https://brewcoach.andyryanweir.com"
+                    className="header__dropdown-item"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Brew Coach
+                  </a>
+                  <a
                     href="https://footballmap.andyryanweir.com"
                     className="header__dropdown-item"
                     target="_blank"
