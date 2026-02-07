@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import type { Post } from './types'
+import postsData from './data/posts.json'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Feed from './components/feed/Feed'
@@ -20,14 +22,24 @@ function ScrollToTop() {
   return null
 }
 
+function useProjectTitle() {
+  const { pathname } = useLocation()
+  const match = pathname.match(/^\/work\/(.+)/)
+  if (!match) return undefined
+  const posts: Post[] = postsData.posts as Post[]
+  const post = posts.find((p) => p.id === match[1])
+  return post?.title
+}
+
 function App() {
   const { pathname } = useLocation()
   const isProjectDetail = pathname.startsWith('/work/')
+  const projectTitle = useProjectTitle()
 
   return (
     <div className="app">
       <ScrollToTop />
-      {!isProjectDetail && <Header />}
+      <Header breadcrumb={projectTitle} />
       <main className={`main${isProjectDetail ? ' main--flush' : ''}`}>
         <Routes>
           <Route path="/" element={<Feed />} />

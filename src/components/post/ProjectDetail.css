@@ -1,49 +1,3 @@
-.project-detail {
-  min-height: 100dvh;
-  background-color: var(--color-bg);
-}
-
-.project-detail__header {
-  position: sticky;
-  top: 0;
-  z-index: var(--z-sticky);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: var(--header-height);
-  padding: 0 var(--content-padding);
-  background-color: var(--color-header-bg);
-  backdrop-filter: var(--blur-backdrop);
-  -webkit-backdrop-filter: var(--blur-backdrop);
-  border-bottom: 1px solid var(--color-header-border);
-  box-shadow: 0 1px 3px var(--color-header-shadow);
-}
-
-.project-detail__header-title {
-  font-size: var(--text-base);
-  font-weight: var(--font-semibold);
-  color: var(--color-text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
-}
-
-.project-detail__back {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  color: var(--color-text-secondary);
-  transition: color var(--transition-fast);
-  flex-shrink: 0;
-}
-
-.project-detail__back:hover {
-  color: var(--color-text);
-}
-
 .project-detail__body {
   max-width: var(--max-width-content);
   margin: 0 auto;
@@ -134,4 +88,44 @@
 
 .project-detail__link:hover .project-detail__link-arrow {
   transform: translateX(2px);
+}
+
+/* Next project CTA */
+.project-detail__next {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-8);
+  border-top: var(--dashed-border);
+}
+
+.project-detail__next-label {
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.project-detail__next-title {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  letter-spacing: var(--tracking-tight);
+  transition: color var(--transition-fast);
+}
+
+.project-detail__next-title svg {
+  transition: transform var(--transition-fast);
+}
+
+.project-detail__next:hover .project-detail__next-title {
+  color: var(--color-text-secondary);
+}
+
+.project-detail__next:hover .project-detail__next-title svg {
+  transform: translateX(4px);
 }
