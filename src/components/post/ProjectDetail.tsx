@@ -12,7 +12,9 @@ function ProjectDetail() {
   const navigate = useNavigate()
 
   const posts: Post[] = postsData.posts as Post[]
-  const post = posts.find((p) => p.id === projectId)
+  const currentIndex = posts.findIndex((p) => p.id === projectId)
+  const post = currentIndex !== -1 ? posts[currentIndex] : undefined
+  const nextPost = currentIndex !== -1 ? posts[(currentIndex + 1) % posts.length] : undefined
 
   useEffect(() => {
     if (!post) {
@@ -36,13 +38,6 @@ function ProjectDetail() {
 
   return (
     <div className="project-detail">
-      <header className="project-detail__header">
-        <span className="project-detail__header-title">{post.title}</span>
-        <Link to="/" className="project-detail__back">
-          Back
-        </Link>
-      </header>
-
       <div className="project-detail__body">
         <div className="project-detail__hero">
           <PostImage
@@ -104,6 +99,18 @@ function ProjectDetail() {
 
           {images.gallery && images.gallery.length > 0 && (
             <PostGallery images={images.gallery} />
+          )}
+
+          {nextPost && (
+            <Link to={`/work/${nextPost.id}`} className="project-detail__next">
+              <span className="project-detail__next-label">Next Project</span>
+              <span className="project-detail__next-title">
+                {nextPost.title}
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M7 4L13 10L7 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+            </Link>
           )}
         </div>
       </div>
