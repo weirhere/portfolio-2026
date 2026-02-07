@@ -132,6 +132,14 @@ function Header({ breadcrumb }: HeaderProps) {
                   >
                     Football Map
                   </a>
+                  <a
+                    href="https://audit.andyryanweir.com"
+                    className="header__dropdown-item"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Design System Audit
+                  </a>
                 </div>
               </div>
               <ResumeButton />
