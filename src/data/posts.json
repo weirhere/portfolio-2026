@@ -48,6 +48,12 @@
         "role": "Founding Senior Product Designer",
         "client": "Feathr",
         "year": "2023-Present",
+        "collaborators": [
+          { "name": "Abhay Khurana", "role": "VP of Product" },
+          { "name": "Freddy Wong", "role": "Product Manager" },
+          { "name": "Alex Van Holtz", "role": "Principal Front-End Engineer, Ads" },
+          { "name": "Lucas Swick", "role": "Principal Front-End Engineer, Fundraising" }
+        ],
         "link": {
           "url": "https://www.feathr.co",
           "label": "Visit Feathr"
@@ -92,6 +98,10 @@
         "role": "Product Designer",
         "client": "GEICO via Brave People",
         "year": "2022",
+        "collaborators": [
+          { "name": "Rose Prince", "role": "Product Design Manager" },
+          { "name": "Alejandro de Jesus", "role": "Senior Product Designer" }
+        ],
         "link": {
           "url": "https://www.bravepeople.co/work/geico",
           "label": "View Case Study"
@@ -141,6 +151,9 @@
         "role": "Product Designer",
         "client": "FCF via Brave People",
         "year": "2021",
+        "collaborators": [
+          { "name": "Lana Suarez", "role": "Design Manager, Brave People" }
+        ],
         "link": {
           "url": "https://www.bravepeople.co/work/fcf",
           "label": "View Case Study"

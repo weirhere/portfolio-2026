@@ -5,9 +5,15 @@
 }
 
 .project-detail__hero {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0;
+  background: none;
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-bottom: var(--space-8);
+  cursor: zoom-in;
 }
 
 .project-detail__content {
@@ -70,6 +76,7 @@
 
 .project-detail__link {
   display: inline-flex;
+  align-self: flex-start;
   align-items: center;
   gap: var(--space-1);
   font-size: var(--text-sm);
@@ -88,6 +95,36 @@
 
 .project-detail__link:hover .project-detail__link-arrow {
   transform: translateX(2px);
+}
+
+/* Collaborators */
+.project-detail__collaborators {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.project-detail__collaborator-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.project-detail__collaborator {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.project-detail__collaborator-name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+}
+
+.project-detail__collaborator-role {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
 }
 
 /* Next project CTA */

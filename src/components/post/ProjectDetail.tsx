@@ -1,15 +1,18 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import type { Post } from '../../types'
 import postsData from '../../data/posts.json'
 import Tag from '../ui/Tag'
 import PostImage from './PostImage'
 import PostGallery from './PostGallery'
+import Lightbox from '../ui/Lightbox'
 import './ProjectDetail.css'
 
 function ProjectDetail() {
   const { projectId } = useParams<{ projectId: string }>()
   const navigate = useNavigate()
+
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
   const posts: Post[] = postsData.posts as Post[]
   const currentIndex = posts.findIndex((p) => p.id === projectId)
@@ -24,28 +27,41 @@ function ProjectDetail() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === 'Escape' && lightboxIndex === null) {
         navigate(-1)
       }
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [navigate])
+  }, [navigate, lightboxIndex])
 
   if (!post) return null
 
   const { details, images } = post
 
+  const allLightboxImages = [
+    { src: images.hero, alt: post.title },
+    ...(images.gallery ?? []).map(img => ({ src: img.src, alt: img.alt })),
+  ]
+
+  const closeLightbox = () => setLightboxIndex(null)
+  const goToPrev = () => setLightboxIndex(i => (i !== null && i > 0 ? i - 1 : i))
+  const goToNext = () => setLightboxIndex(i => (i !== null && i < allLightboxImages.length - 1 ? i + 1 : i))
+
   return (
     <div className="project-detail">
       <div className="project-detail__body">
-        <div className="project-detail__hero">
+        <button
+          className="project-detail__hero"
+          onClick={() => setLightboxIndex(0)}
+          aria-label={`View ${post.title} full screen`}
+        >
           <PostImage
             src={images.hero}
             alt={post.title}
             aspectRatio={images.heroAspectRatio}
           />
-        </div>
+        </button>
 
         <div className="project-detail__content">
           <div>
@@ -80,25 +96,51 @@ function ProjectDetail() {
                 <span className="project-detail__meta-value">{details.year}</span>
               </div>
             )}
-            {details.link && (
-              <div className="project-detail__meta-item">
-                <a
-                  href={details.link.url}
-                  className="project-detail__link link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {details.link.label}
-                  <span className="project-detail__link-arrow" aria-hidden="true">
-                    →
-                  </span>
-                </a>
-              </div>
-            )}
           </div>
 
+          {details.collaborators && details.collaborators.length > 0 && (
+            <div className="project-detail__collaborators">
+              <span className="project-detail__meta-label">Collaborators</span>
+              <ul className="project-detail__collaborator-list">
+                {details.collaborators.map((collab) => (
+                  <li key={collab.name} className="project-detail__collaborator">
+                    <span className="project-detail__collaborator-name">{collab.name}</span>
+                    {collab.role && <span className="project-detail__collaborator-role">{collab.role}</span>}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {details.link && (
+            <a
+              href={details.link.url}
+              className="project-detail__link link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {details.link.label}
+              <span className="project-detail__link-arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+          )}
+
           {images.gallery && images.gallery.length > 0 && (
-            <PostGallery images={images.gallery} />
+            <PostGallery
+              images={images.gallery}
+              onImageClick={(index) => setLightboxIndex(index + 1)}
+            />
+          )}
+
+          {lightboxIndex !== null && (
+            <Lightbox
+              images={allLightboxImages}
+              currentIndex={lightboxIndex}
+              onClose={closeLightbox}
+              onPrev={goToPrev}
+              onNext={goToNext}
+            />
           )}
 
           {nextPost && (
