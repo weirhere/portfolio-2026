@@ -17,11 +17,17 @@ export interface PostLink {
   label: string;
 }
 
+export interface Collaborator {
+  name: string;
+  role: string;
+}
+
 export interface PostDetails {
   description: string;
   role?: string;
   client?: string;
   year?: string;
+  collaborators?: Collaborator[];
   link?: PostLink;
 }
 

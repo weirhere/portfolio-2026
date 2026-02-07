@@ -6,15 +6,20 @@ import './PostGallery.css'
 
 interface PostGalleryProps {
   images: PostImageType[]
+  onImageClick?: (index: number) => void
 }
 
-function PostGallery({ images }: PostGalleryProps) {
+function PostGallery({ images, onImageClick }: PostGalleryProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
   if (images.length === 0) return null
 
   const openLightbox = (index: number) => {
-    setLightboxIndex(index)
+    if (onImageClick) {
+      onImageClick(index)
+    } else {
+      setLightboxIndex(index)
+    }
   }
 
   const closeLightbox = () => {
@@ -56,7 +61,7 @@ function PostGallery({ images }: PostGalleryProps) {
         ))}
       </div>
 
-      {lightboxIndex !== null && (
+      {!onImageClick && lightboxIndex !== null && (
         <Lightbox
           images={images.map(img => ({ src: img.src, alt: img.alt }))}
           currentIndex={lightboxIndex}
